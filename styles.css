@@ -14,7 +14,6 @@
   padding: 0; /* 2 */
   border: 0 solid; /* 3 */
 }
-
 /*
   1. Use a consistent sensible line-height in all browsers.
   2. Prevent adjustments of font size after orientation changes in iOS.
@@ -387,7 +386,9 @@ input:where([type='button'], [type='reset'], [type='submit']),
 
 /* ---------------------------------------------------------------------
 ----------------------------My Code------------------------------------*/
-
+body {
+  background-color: darkslategrey;
+}
 .layout-grid {
     width: 100vw;
     height: 100vh;
@@ -403,29 +404,170 @@ input:where([type='button'], [type='reset'], [type='submit']),
     grid-template-rows: 1fr 5fr;
     
 }
+/*Header section*/
+
 .header-container {
     grid-area: head;
-    background-color: blue;
-    grid-area
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+/*Searchbar Subsection*/
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px black;
+}
+.search-icon {
+  border: solid 1px;
+}
+.form {
+  flex: 2;
+  border: solid 1px black;
+}
+#search {
+  width: 100%;
+  background-color: grey;
+  border-radius: 15px;
 
 }
+/*Welcome User Profile Subsection */
+.user-welcome {
+  grid-area: 2/1/3/3;
+  display: flex;
+  align-items: center;
+  
+}
+.welcome-p {
+  border: solid 1px black;
+}
+.user-name {
+  border: solid 1px black;
+}
+.profile-img {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  margin: .5rem;
+}
+/*Profile notifs (top-right) header Subsection */
+.profile-notifs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Header buttons (bottom-right) Subsection */
+.buttons-subsection {
+  grid-area: 2/2/3/3;
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px;
+  align-items: center;
+}
+.header-button {
+  background-color: darkcyan;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+
+/*Sidebar section*/
 .sidebar-container {
     grid-area: sidebar;
-    background-color: blue;
+    color: white;
 }
+.dash-1,
+.dash-2 {
+  margin-top: 2rem;
+}
+.svg-imgs {
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: .5rem;
+}
+.dash-img {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+}
+
+/*Hero section - main grid */
 .hero-container {
     grid-area: hero;
-    background-color: transparent;
+    
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 .main-grid {
-    background-color: rebeccapurple;
+    border: solid rebeccapurple 1px;
     grid-column: 1;
+    grid-row: span 2;
     width: 100%;
 }
+.hero-desc {
+  margin: 1rem 1rem;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 1rem;
+  gap: 1rem;
+}
+.card {
+  border: solid black 1px;
+  border-radius: 15px;
+  padding: 1rem .5rem;
+  line-height: 1.25rem;
+}
+.card-icons {
+  display: flex;
+  justify-content: end;
+}
+.bold {
+  font-weight: 600;
+}
+
+
+/* Widget subsection */
+.announcement-desc {
+  padding: .25rem 0;
+}
 .widget-grid {
-    background-color: green;
+  border: solid green 1px;
     grid-column: 2;
+    grid-row: 1;
     width: 100%;
+}
+.announcment-bubble {
+  padding: 1rem 1rem;
+  /*background-color: white;*/
+  border-radius: 15px;
+}
+.announcement-container {
+  padding: .5rem 0;
+  line-height: 1.25rem;
+  border-bottom: solid grey 1px;
+}
+.announcement-container:last-child {
+  border-bottom: none;
+}
+/* Trending Subsection */
+.trending-desc {
+  padding: .25rem 0;
+}
+.trending-bubble {
+  padding: .25rem .5rem;
+  /*background-color: white;*/
+  line-height: 1.25rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.trending-profile {
+  display: flex;
+  padding: .25rem 0;
 }
