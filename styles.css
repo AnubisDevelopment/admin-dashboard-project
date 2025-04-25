@@ -387,7 +387,7 @@ input:where([type='button'], [type='reset'], [type='submit']),
 /* ---------------------------------------------------------------------
 ----------------------------My Code------------------------------------*/
 body {
-  background-color: darkslategrey;
+  background-color: rgb(192, 189, 189);
 }
 .layout-grid {
     width: 100vw;
@@ -411,24 +411,23 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  background-color: whitesmoke;
 }
 /*Searchbar Subsection*/
 .searchbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 2px black;
 }
 .search-icon {
-  border: solid 1px;
+
 }
 .form {
   flex: 2;
-  border: solid 1px black;
 }
 #search {
   width: 100%;
-  background-color: grey;
+  background-color: rgba(192, 189, 189,.7);
   border-radius: 15px;
 
 }
@@ -440,10 +439,10 @@ body {
   
 }
 .welcome-p {
-  border: solid 1px black;
+  
 }
 .user-name {
-  border: solid 1px black;
+  
 }
 .profile-img {
   display: inline-block;
@@ -462,13 +461,13 @@ body {
   grid-area: 2/2/3/3;
   display: flex;
   justify-content: space-around;
-  border: solid 1px;
   align-items: center;
 }
 .header-button {
-  background-color: darkcyan;
+  background-color: rgb(97, 174, 222);
   border-radius: 15px;
   padding: 5px 15px;
+  color: white;
 }
 
 
@@ -476,6 +475,7 @@ body {
 .sidebar-container {
     grid-area: sidebar;
     color: white;
+    background-color: rgb(67, 138, 182);
 }
 .dash-1,
 .dash-2 {
@@ -486,6 +486,7 @@ body {
   height: 1.5rem;
   width: 1.5rem;
   margin: .5rem;
+  
 }
 .dash-img {
   display: inline-block;
@@ -496,13 +497,12 @@ body {
 /*Hero section - main grid */
 .hero-container {
     grid-area: hero;
-    
+    background-color: rgb(192, 189, 189);
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 .main-grid {
-    border: solid rebeccapurple 1px;
     grid-column: 1;
     grid-row: span 2;
     width: 100%;
@@ -514,37 +514,51 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 1rem;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 .card {
-  border: solid black 1px;
+  box-shadow: 0px 0px 3px 0px;
+  border-left: solid orange 6px;
   border-radius: 15px;
   padding: 1rem .5rem;
   line-height: 1.25rem;
+  background-color: whitesmoke;
+  color: rgb(96, 96, 96);
+  min-height: 10vh;
+  min-width: 20vw;
+  display: flex;
+  flex-direction: column;
 }
 .card-icons {
+  height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: end;
+  align-items: end;
 }
+
 .bold {
   font-weight: 600;
+  color: black;
 }
 
 
 /* Widget subsection */
 .announcement-desc {
-  padding: .25rem 0;
+  
+  margin: 1rem 1rem;
 }
 .widget-grid {
-  border: solid green 1px;
+  background-color: rgb(192, 189, 189);
     grid-column: 2;
     grid-row: 1;
     width: 100%;
 }
 .announcment-bubble {
   padding: 1rem 1rem;
-  /*background-color: white;*/
+  background-color: white;
   border-radius: 15px;
+  margin: 0 1rem;
 }
 .announcement-container {
   padding: .5rem 0;
@@ -556,16 +570,16 @@ body {
 }
 /* Trending Subsection */
 .trending-desc {
-  padding: .25rem 0;
+  margin: 1rem 1rem;
 }
 .trending-bubble {
   padding: .25rem .5rem;
-  /*background-color: white;*/
+  background-color: white;
   line-height: 1.25rem;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  
+  margin: 0 1rem;
 }
 .trending-profile {
   display: flex;
